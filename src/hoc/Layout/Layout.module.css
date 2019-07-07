@@ -1,0 +1,9 @@
+.MainContent{
+    height: calc(100% - 5rem);
+}
+
+.Footer {
+    height: 2rem;
+    background-color: #15A3CB;
+    color: #fff;
+}

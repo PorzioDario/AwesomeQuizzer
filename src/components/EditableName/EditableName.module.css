@@ -1,0 +1,24 @@
+.Container {
+    padding: 1.5rem;
+}
+
+.MainIcon {
+    font-size: 2.5rem;
+    margin-right: 0.5rem;  
+}
+
+.Icon {
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.Parag {
+    display: inline-block;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* input {
+    border: none;
+} */

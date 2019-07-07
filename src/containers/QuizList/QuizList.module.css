@@ -1,0 +1,32 @@
+.commandsBar{
+    display: grid;
+    grid-template-columns: auto auto auto 1fr auto;
+}
+
+.commandsBar .searchBox p {
+    display: inline;
+    margin-right: 1rem;
+}
+
+.commandsBar .command {
+    margin: 0 -10px 0 20px;
+    padding: 5px 10px;
+}
+
+.commandsBar .searchBox {
+    grid-column: 5;
+    margin: 0 10px;
+}
+
+.commandsBar .fas{
+    padding: 0 5px;
+    font-size: 1.3rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.pagination{
+    margin: 5px 20px;
+}
