@@ -11,6 +11,10 @@ import { BrowserRouter } from 'react-router-dom';
 //import { AuthReducer } from './store/reducers/AuthReducer';
 import AuthReducer from './store/reducers/AuthReducer';
 
+if (module.hot) {
+    module.hot.accept();
+}
+
 const myStore = createStore(AuthReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 ReactDOM.render(<Provider store={myStore}><BrowserRouter> <App /> </BrowserRouter></Provider>, document.getElementById('root'));

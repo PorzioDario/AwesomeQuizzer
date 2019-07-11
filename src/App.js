@@ -25,7 +25,7 @@ library.add(faTimes);
 library.add(faPencilAlt);
 
 class App extends Component {
-  
+
 componentDidMount() {
   const token = localStorage.getItem('token');
   const expDate = new Date(localStorage.getItem('tokenExpirationDate'));
@@ -56,14 +56,14 @@ componentDidMount() {
         <Route path="/" exact render={() => <p>Cool Landing Page</p>} />
         {/* <Redirect to="/" />  */}
       </Switch>
-    } else if (this.props.isNewUser) {
-      routes = <Switch>
-        <Route path="/new-user" render={() => <p>Please fill the following form and submit to continue...</p>} />
-        {/* This route is allowed just to let the component itself redirect to the correct page depending on login/signup */}
-        <Route path="/login" component={LoginManager} />
-        <Route path="/" render={() => <Redirect to="/new-user" />} />
-        {/* <Route path="/" render={() => <p>404 Page Not Found</p>} /> */}
-      </Switch>;
+    // } else if (this.props.isNewUser) {
+    //   routes = <Switch>
+    //     <Route path="/new-user" render={() => <p>Please fill the following form and submit to continue...</p>} />
+    //     {/* This route is allowed just to let the component itself redirect to the correct page depending on login/signup */}
+    //     <Route path="/login" component={LoginManager} />
+    //     <Route path="/" render={() => <Redirect to="/new-user" />} />
+    //     {/* <Route path="/" render={() => <p>404 Page Not Found</p>} /> */}
+    //   </Switch>;
     } else {
       routes = <Switch>
         <Route path="/dashboard" render={() => <p>User Dashboard</p>} />
