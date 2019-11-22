@@ -13,7 +13,7 @@ import {setToken} from '../../axios';
 
 const LoginManager = (props) => {
 
-    const baseUrl = 'http://localhost:8800/auth/';
+    const baseUrl = 'http://localhost:33000/auth/';
 
     const [{ hasError, errorMessage }, setError] = useState({ hasError: false, errorMessage: '' });
     const [email, setEmail] = useState('');
@@ -28,7 +28,7 @@ const LoginManager = (props) => {
         event.preventDefault();
         const payload = {
             email,
-            psw
+            password: psw
         }
 
         axios.post(baseUrl + 'login', payload)
@@ -51,11 +51,12 @@ const LoginManager = (props) => {
         event.preventDefault();
         const payload = {
             email,
-            psw,
+            password: psw,
+            confirmPassword: psw,
             username
         }
 
-        axios.post(baseUrl + 'signin', payload)
+        axios.post(baseUrl + 'signup', payload)
             .then(response => {
                 let expDate = new Date(new Date().getTime() + response.data.expiresIn * 1000);
                 localStorage.setItem('token', response.data.idToken);
